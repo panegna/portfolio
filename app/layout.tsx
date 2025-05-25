@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${instrumentSerif.variable} ${geist.variable} ${geist.className} antialiased overflow-x-hidden `}
+        className={`${instrumentSerif.variable} ${geist.variable} ${instrumentSerif.className} antialiased overflow-x-hidden `}
       >
         <Header className="hidden md:flex" />
         <MobileHeader className="md:hidden" />
