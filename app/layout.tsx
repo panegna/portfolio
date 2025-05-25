@@ -20,7 +20,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Pan | Web developer",
+  title: "Panegna | Développeur web",
   description: "Bienvenue sur mon portfolio",
 };
 
