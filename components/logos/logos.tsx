@@ -1,7 +1,4 @@
-import Image from "next/image";
-import { Badge } from "../ui/badge";
 import { ComponentPropsWithoutRef } from "react";
-import { Slot } from "@radix-ui/react-slot";
 
 export function FigmaLogo(
   props: ComponentPropsWithoutRef<"svg"> & { size?: number; className?: string }
