@@ -26,12 +26,10 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-export default async function Page(props: {
-  params: {
-    projetId: string;
-  };
-}) {
-  const { projetId } = props.params;
+type Params = Promise<{ projetId: string }>;
+
+export default async function Page({ params }: { params: Params }) {
+  const { projetId } = await params;
   const projet = PROJECTS.find((projet) => projet.slug === projetId);
 
   if (!projet) {
