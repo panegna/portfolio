@@ -16,7 +16,6 @@ import {
 import { GmailLogo, LinkedinLogo } from "../logos/logos";
 import Link from "next/link";
 import { formSchema } from "@/lib/schema";
-import { sendEmail } from "@/app/api/send/route";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { LoaderCircle } from "lucide-react";
@@ -35,31 +34,42 @@ export function ContactForm() {
   const router = useRouter();
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    const res = await sendEmail(values);
-    const now = new Date();
-    const formattedDate = now.toLocaleString("fr-FR", {
-      weekday: "long",
-      day: "2-digit",
-      month: "long",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-    if (res.success) {
-      router.push("/");
-      setTimeout(() => {
-        toast("Votre message a bien été envoyé", {
-          description: formattedDate,
-          action: {
-            label: "Fermer",
-            onClick: () => console.log("Undo"),
-          },
-        });
-      }, 1500);
-    } else {
-      console.error("erreur d'envoi : ", res.error);
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const result = await res.json();
+      const now = new Date();
+      const formattedDate = now.toLocaleString("fr-FR", {
+        weekday: "long",
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
+      if (res.ok && result.success) {
+        router.push("/");
+        setTimeout(() => {
+          toast("Votre message a bien été envoyé", {
+            description: formattedDate,
+            action: {
+              label: "Fermer",
+              onClick: () => console.log("Fermé"),
+            },
+          });
+        }, 1500);
+      } else {
+        console.error("Erreur d'envoi :", result.error);
+      }
+    } catch (err) {
+      console.error("Erreur réseau ou serveur :", err);
     }
   }
 
