@@ -12,7 +12,7 @@ export interface OrbitingCirclesProps
   path?: boolean;
   iconSize?: number;
   speed?: number;
-  styleCustom: string,
+  styleCustom: string;
 }
 
 export function OrbitingCircles({
@@ -60,7 +60,7 @@ export function OrbitingCircles({
             className={cn(
               `absolute flex size-[var(--icon-size)] transform-gpu animate-orbit items-center justify-center rounded-full`,
               { "[animation-direction:reverse]": reverse },
-              className,
+              className
             )}
             {...props}
           >

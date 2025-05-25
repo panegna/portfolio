@@ -100,8 +100,6 @@
 :root {
   --radius: 0.625rem;
   --background: oklch(0 0 0 / 1);
-  --font-serif: var(--font-instrument-serif);
-  --font-sans: var(--font-geist-sans);
   --foreground: oklch(0.98 0 0);
   --muted: oklch(0.25 0.02 240);
   --muted-foreground: oklch(0.65 0.02 240);

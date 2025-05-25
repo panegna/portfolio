@@ -12,6 +12,7 @@ const instrumentSerif = Instrument_Serif({
   weight: "400",
   style: "italic",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geist = Geist({
@@ -30,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="overflow-x-hidden">
+    <html lang="fr">
       <body
         className={`${instrumentSerif.variable} ${geist.variable} ${geist.className} antialiased overflow-x-hidden `}
       >
