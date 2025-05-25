@@ -31,7 +31,7 @@ export default async function Page(props: {
     projetId: string;
   };
 }) {
-  const { projetId } = await props.params;
+  const { projetId } = props.params;
   const projet = PROJECTS.find((projet) => projet.slug === projetId);
 
   if (!projet) {
