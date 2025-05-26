@@ -16,7 +16,7 @@ import {
 export default function SkillsSection() {
   const size = 16;
   return (
-    <div className="w-full overflow-hidden h-[100vh] mt-[-250px] flex flex-col justify-center items-center">
+    <div className="w-full overflow-hidden pt-60 h-250 mt-[-280] md:mt-[-250] flex flex-col justify-start items-start">
       <div className="relative flex h-130 mb-50 w-full flex-col items-center justify-center overflow-visible">
         <OrbitingCircles
           styleCustom="stroke-[#FFFFFF]/4 stroke-1 "

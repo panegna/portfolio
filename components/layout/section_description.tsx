@@ -7,9 +7,9 @@ export default function DescriptionSection() {
   return (
     <div className="flex flex-col justify-center items-center">
       <TextReveal>
-        Ah oui, au fait ! Moi, c’est
+        Ah oui, au fait ! Moi c’est
         <span className="">Panegna</span>
-        <span className="font-serif">[pania]</span>. Développeur Full Stack basé
+        <span className="font-serif">[pania]. </span>Développeur Full Stack basé
         en Vendée. En gros je transforme vos idées en
         <SparklesText
           colors={{ first: "yellow", second: "orange" }}

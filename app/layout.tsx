@@ -21,7 +21,8 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: "Panegna | Développeur web",
-  description: "Bienvenue sur mon portfolio",
+  description:
+    "Jeune développeur web freelance. Découvrez mes projets, compétences et services en développement de sites web modernes, performants et sur mesure.",
 };
 
 export default function RootLayout({
