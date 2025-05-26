@@ -4,7 +4,7 @@ import DisplayCards from "../ui/display-cards";
 import { motion } from "motion/react";
 export default function Services() {
   return (
-    <section className="flex flex-col lg:flex-row px-5 md:px-20 pt-25 pb-65 lg:pb-50">
+    <section className="flex flex-col lg:flex-row px-10 md:px-20 pt-25 pb-50 md:pb-65 lg:pb-50">
       <motion.div
         initial={{ opacity: 0.0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -55,7 +55,7 @@ export default function Services() {
           ease: "easeInOut",
         }}
         viewport={{ once: true }}
-        className="flex-1 flex justify-center lg:justify-start lg:ml-30 mt-15 lg:mt-[-80px]"
+        className="flex-1 hidden  md:flex justify-center lg:justify-start lg:ml-30 mt-15 lg:mt-[-80px]"
       >
         <DisplayCards></DisplayCards>
       </motion.div>
