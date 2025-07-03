@@ -16,6 +16,8 @@ import {
   VercelLogo,
   ZodLogo,
   ShadcnLogo,
+  BetterAuthLogo,
+  ResendLogo,
 } from "@/components/logos/logos";
 import Image from "next/image";
 import * as motion from "motion/react-client";
@@ -242,6 +244,30 @@ export default async function Page({ params }: { params: Params }) {
                     </TooltipTrigger>
                     <TooltipContent>
                       <p>Shadcn</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              )}
+              {projet.stack.includes("betterauth") && (
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger>
+                      <BetterAuthLogo className="rounded-md" size={size} />
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Better Auth</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              )}
+              {projet.stack.includes("resend") && (
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger>
+                      <ResendLogo className="rounded-md" size={size} />
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Resend</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>

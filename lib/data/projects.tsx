@@ -1,5 +1,32 @@
 export const PROJECTS = [
   {
+    title: "Outil assistant pour enseignant",
+    description:
+      "Développement d'un Saas dédié aux enseignants afin de réduire les tâches répétitives, accroître la productivité et revenir à l'essentiel : l'éducation.",
+    slug: "saas",
+    badge1: "Saas",
+    badge2: "En cours",
+    image: "/images/saas.png",
+    categorie: "Projet personnel",
+    entite: "Saas",
+    stack: [
+      "react",
+      "next",
+      "tailwind",
+      "shadcn",
+      "vercel",
+      "html",
+      "css",
+      "ts",
+      "betterauth",
+      "resend",
+    ],
+    primaryContent:
+      "Développement d'un Saas dédié aux enseignants afin de réduire les tâches répétitives, accroître la productivité et revenir à l'essentiel : l'éducation.",
+    secondaryContent: "Projet encore en cours.",
+    secondaryImage: "/images/saas.png",
+  },
+  {
     title: "Two Roule",
     description:
       "Tableau de bord personnalisé pour visualiser locations, revenus et disponibilités, connecté à l’API WooCommerce.",
@@ -89,6 +116,7 @@ export const PROJECTS = [
       "html",
       "css",
       "ts",
+      "resend",
     ],
     primaryContent:
       "Développement complet de mon site portfolio, pensé comme un projet à part entière.",

@@ -28,15 +28,15 @@ export default function HeroProjectSection() {
         className="sticky top-55 z-10 w-full"
       >
         <ProjectCard
-          title="Panher"
-          badge1="Challenge"
-          badge2="Scolaire"
-          badge3="Sports"
-          slug="/panher"
-          image="/images/panher-mockup.png"
+          title="Outil assistant pour enseignant"
+          badge1="Saas"
+          badge2="En cours"
+          slug="/saas"
+          image="/images/saas.png"
         >
-          Projet de marque fictive réalisé en une semaine : design, maquettes et
-          développement.
+          Développement d&apos;un Saas dédié aux enseignants afin de réduire les
+          tâches répétitives, accroître la productivité et revenir à
+          l&apos;essentiel : l&apos;éducation.
         </ProjectCard>
       </motion.div>
       <motion.div
